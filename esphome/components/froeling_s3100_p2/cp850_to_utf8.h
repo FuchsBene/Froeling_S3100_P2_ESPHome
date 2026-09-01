@@ -1,11 +1,17 @@
 /*
  * Originally from: https://github.com/dhoepfl/Radiator
  * Author: Daniel Höpfl <radiator@hoepfl.de>
+ * 
+ * Modified for Froeling_S3100_P2
+ * Copyright (c) 2026 Benedikt Fuchs <github.com/FuchsBene>
  */
 
-#ifndef __DH_CP850_TO_UTF8_H__
-#define __DH_CP850_TO_UTF8_H__
+#pragma once
+#include <string>
+#include <cstdint>
+
+namespace esphome::froeling_s3100_p2 {
 
 std::string cp850toUTF8(const uint8_t *message, uint16_t len);
 
-#endif
+}  // namespace esphome::froeling_s3100_p2

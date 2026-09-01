@@ -1,11 +1,17 @@
 /*
  * Originally from: https://github.com/dhoepfl/Radiator
  * Author: Daniel Höpfl <radiator@hoepfl.de>
+ * 
+ * Modified for Froeling_S3100_P2
+ * Copyright (c) 2026 Benedikt Fuchs <github.com/FuchsBene>
  */
 
+#include "cp850_to_utf8.h"
 #include <string>
 
-static std::string cp8500toUTF8Map[256] = {
+namespace esphome::froeling_s3100_p2 {
+
+static std::string cp850toUTF8Map[256] = {
 /* 0 */ "\x00", /* 263A */ "\xE2\x98\xBA", /* 263B */ "\xE2\x98\xBB", /* 2665 */ "\xE2\x99\xA5",
 /* 2666 */ "\xE2\x99\xA6", /* 2663 */ "\xE2\x99\xA3", /* 2660 */ "\xE2\x99\xA0", /* 2022 */ "\xE2\x80\xA2",
 /* 25D8 */ "\xE2\x97\x98", /* 25CB */ "\xE2\x97\x8B",
@@ -78,9 +84,10 @@ std::string cp850toUTF8(const uint8_t *message, uint16_t len)
    std::string result;
 
    for (uint16_t i = 0; i < len; ++i) {
-      result += cp8500toUTF8Map[message[i]];
+      result += cp850toUTF8Map[message[i]];
    }
 
    return result;
 }
 
+}  // namespace esphome::froeling_s3100_p2
