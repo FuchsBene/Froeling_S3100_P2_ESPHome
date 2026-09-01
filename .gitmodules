@@ -1,0 +1,6 @@
+[submodule "reference_projects/dhoepfl_Radiator"]
+	path = reference_projects/dhoepfl_Radiator
+	url = https://github.com/dhoepfl/Radiator
+[submodule "reference_projects/begrie_Radiator_Froeling_P2_S3100_ESP32"]
+	path = reference_projects/begrie_Radiator_Froeling_P2_S3100_ESP32
+	url = https://github.com/begrie/Radiator_Froeling_P2_S3100_ESP32
