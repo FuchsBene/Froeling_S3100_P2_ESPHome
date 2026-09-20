@@ -2,7 +2,7 @@
  * cp850_to_utf8.cpp 
  * Converts CP850-encoded text received from the Fröling S3100/P2 interface to UTF-8.
  * 
- Originally from: https://github.com/dhoepfl/Radiator
+ * Originally from: https://github.com/dhoepfl/Radiator
  * Author: Daniel Höpfl <radiator@hoepfl.de>
  * 
  * Modified for Froeling_S3100_P2_ESPHome
